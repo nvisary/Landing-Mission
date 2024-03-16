@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://2vhhtbiwjlyf"]
 
 [ext_resource type="Script" path="res://ground.gd" id="1_1eewl"]
-[ext_resource type="Texture2D" uid="uid://dmwaustrq6gw" path="res://assets/Elements/Stone/Stone_18-128x128.png" id="2_4yblg"]
+[ext_resource type="Texture2D" uid="uid://cmpytq7td14cm" path="res://assets/Martian/Martian_05-512x512.png" id="2_rr3mv"]
 
 [node name="ground" type="StaticBody2D"]
 script = ExtResource("1_1eewl")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 texture_repeat = 2
-texture = ExtResource("2_4yblg")
+texture = ExtResource("2_rr3mv")

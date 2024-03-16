@@ -2,14 +2,17 @@
 extends StaticBody2D
 
 
-# Called when the node enters the scene tree for the first time.
+@onready var polygon: Polygon2D = $Polygon2D
 func _ready():
 	if not Engine.is_editor_hint():
 		var coll := CollisionPolygon2D.new()
-		coll.polygon = $Polygon2D.polygon
+		coll.polygon = polygon.polygon
 		add_child(coll)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+#func _process(delta):
+	#if Engine.is_editor_hint():
+		#var points := PackedVector2Array(polygon.polygon)
+		#points.append(polygon.polygon[0])
+		#$Line2D.points = points
