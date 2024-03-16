@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b78qmipf6puye"]
+
+[ext_resource type="PackedScene" uid="uid://cuvwpkr74qe7d" path="res://Landing.tscn" id="1_50hao"]
+[ext_resource type="PackedScene" uid="uid://c3sjn8vaval7t" path="res://rocket.tscn" id="2_diot0"]
+
+[node name="Testing" type="Node2D"]
+
+[node name="Landing" parent="." instance=ExtResource("1_50hao")]
+position = Vector2(528, 581)
+
+[node name="Rocket" parent="." instance=ExtResource("2_diot0")]
+position = Vector2(489, 62)
