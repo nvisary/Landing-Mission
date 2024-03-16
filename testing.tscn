@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b78qmipf6puye"]
+[gd_scene load_steps=3 format=3 uid="uid://b78qmipf6puye"]
 
 [ext_resource type="PackedScene" uid="uid://cuvwpkr74qe7d" path="res://Landing.tscn" id="1_50hao"]
 [ext_resource type="PackedScene" uid="uid://c3sjn8vaval7t" path="res://rocket.tscn" id="2_diot0"]
-[ext_resource type="Script" path="res://Camera2D.gd" id="3_dw6jf"]
 
 [node name="Testing" type="Node2D"]
 
@@ -11,15 +10,6 @@ position = Vector2(528, 581)
 
 [node name="Landing2" parent="." instance=ExtResource("1_50hao")]
 position = Vector2(2140, 624)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(501, -5)
-zoom = Vector2(0.445, 0.445)
-position_smoothing_enabled = true
-position_smoothing_speed = 100.0
-rotation_smoothing_enabled = true
-rotation_smoothing_speed = 10.0
-script = ExtResource("3_dw6jf")
 
 [node name="Rocket" parent="." instance=ExtResource("2_diot0")]
 position = Vector2(489, 62)
