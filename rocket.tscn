@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c3sjn8vaval7t"]
 
-[ext_resource type="Texture2D" uid="uid://53qtgvxdx3h2" path="res://assets/small_1.png" id="1_nmypt"]
+[ext_resource type="Texture2D" uid="uid://53qtgvxdx3h2" path="res://assets/ship/small_1.png" id="1_nmypt"]
 [ext_resource type="Script" path="res://rocket.gd" id="1_qosv6"]
 [ext_resource type="Texture2D" uid="uid://7g2c22f6dsbw" path="res://assets/ship_172.png" id="3_6f6jo"]
 [ext_resource type="Texture2D" uid="uid://bottoosbpwn77" path="res://assets/fire_02.png" id="4_i7nsn"]
