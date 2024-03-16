@@ -1,29 +1,21 @@
 extends RigidBody2D
 
-
-var yspeed = 10000
-var xspeed = 10000
-
-var main_thrust = 1000 # Основная тяга
-var force_applied = Vector2()
+var yforce = 100000 / 2
+var xforce = 100000 / 4
+var torque = 1000000
 
 func _ready():
 	set_process(true)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var direction = Vector2(cos(rotation), sin(rotation))
-	
-	
-	if Input.is_action_pressed('ui_left'):
-		#set_axis_velocity(Vector2(-xspeed, 0))
-		
-		apply_central_force(Vector2(-xspeed * 5 * delta, 0).rotated(rotation))
-	if Input.is_action_pressed('ui_right'):
-		#set_axis_velocity(Vector2(xspeed, 0))
-		apply_central_force(Vector2(xspeed * 5 * delta, 0).rotated(rotation))
-	if Input.is_action_pressed('ui_up'):
-		#set_axis_velocity(Vector2(0, -yspeed))
-		apply_central_force(Vector2(0,-yspeed * 10 * delta).rotated(rotation))
+	if Input.is_action_pressed('rotation_left'):
+		apply_torque(-torque * delta)
+	if Input.is_action_pressed('rotation_right'):
+		apply_torque(torque * delta)
+	if Input.is_action_pressed('left_engine') and not Input.is_action_pressed('right_engine'):
+		apply_central_force(Vector2(xforce * delta, 0).rotated(rotation))
+	if Input.is_action_pressed('right_engine') and not Input.is_action_pressed("left_engine"):
+		apply_central_force(Vector2(-xforce * delta, 0).rotated(rotation))
+	if Input.is_action_pressed('left_engine') and Input.is_action_pressed('right_engine'):
+		apply_central_force(Vector2(0,-yforce * delta).rotated(rotation))
 		
